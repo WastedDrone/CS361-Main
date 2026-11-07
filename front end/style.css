@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: lightyellow;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Main notebook layout */
+
+.notepad {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 650px;
+    margin: 40px auto;
+    border: 2px solid black;
+    border-radius: 0 0 30px 30px;
+    background-color: #FFFDE4;
+}
+
+/* Header */
+
+.site-header {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 2px solid black;
+    min-height: 90px;
+}
+
+.site-header h1 {
+    flex: 1;
+    margin: 0;
+    padding: 25px;
+    font-size: 36px;
+}
+
+/* Navigation */
+
+.navigation-menu {
+    display: flex;
+}
+
+.navigation-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-left: 2px solid black;
+    color: black;
+    text-decoration: none;
+    background-color: #F5E6A8;
+    font-weight: bold;
+}
+
+.navigation-menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Page content */
+
+.page-content {
+    padding: 30px;
+}
+
+.page-title {
+    font-size: 28px;
+    margin: 0 0 25px;
+}
+
+/* Home page */
+
+.home-description {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Create and Open Note */
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.note-form label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid gray;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.note-form textarea {
+    min-height: 350px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 12px 30px;
+    border: 1px solid black;
+    background-color: #F5E6A8;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-buttons button:hover {
+    background-color: #E6CF73;
+}
+
+/* View Notes */
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-card {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #F5E6A8;
+    color: black;
+    text-decoration: none;
+}
+
+.note-card h2 {
+    margin: 0 0 10px;
+}
+
+.note-card p {
+    margin: 0;
+}
+
+.note-card:hover {
+    background-color: #E6CF73;
+}
+
+/* Smaller screens */
+
+@media (max-width: 700px) {
+    .notepad {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .site-header {
+        flex-direction: column;
+    }
+
+    .navigation-menu a {
+        flex: 1;
+        padding: 12px 5px;
+        font-size: 13px;
+        border-top: 2px solid black;
+    }
+
+    .navigation-menu a:first-child {
+        border-left: none;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+}
+
+/* Home page displayed as a note */
+
+.home-note {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.home-note label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.home-note-title,
+.home-note-content {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid gray;
+    background-color: white;
+    font-size: 16px;
+}
+
+.home-note-content {
+    min-height: 350px;
+    line-height: 1.6;
+}
+
+.home-note-content p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}

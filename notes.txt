@@ -1,0 +1,8 @@
+Title: Groceries
+Content: Buy milk
+
+Title: Homework
+Content: Finish CS361
+
+Title: Ideas
+Content: Build a website
